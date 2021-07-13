@@ -1,0 +1,53 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Estructura del sitio */
+/* <-- BODY --> */
+body {
+  background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+}
+body header {
+  color: black;
+  margin: 2rem 0;
+}
+body .left-panel {
+  background-color: rgba(255, 255, 0, 0.24);
+  border-radius: 7%;
+  display: none;
+}
+body .left-panel a {
+  color: black;
+}
+body .left-panel a:hover {
+  color: black;
+  transform: scale(1.1);
+}
+body .right-panel {
+  background-color: rgba(255, 255, 0, 0.24);
+}
+body .right-panel #welcome #closeBtn {
+  display: none;
+}
+body .right-panel #checkIn {
+  display: none;
+}
+body .right-panel #timeLeft {
+  display: none;
+}
+body .right-panel #quit {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */

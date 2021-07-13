@@ -1,0 +1,46 @@
+/* <-- BODY --> */
+body{
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+
+    header{
+        color: black;
+        margin: 2rem 0;
+    }
+
+    .left-panel{
+        background-color: rgba(255, 255, 0, 0.24);
+        border-radius: 7%;
+        display: none;
+
+        a{
+            color: black;
+
+            &:hover{
+                color: black;
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .right-panel{
+        background-color: rgba(255, 255, 0, 0.24);
+
+        #welcome{
+            #closeBtn{
+                display: none;
+            }
+        }
+        
+        #checkIn{
+            display: none;
+        }
+
+        #timeLeft{
+            display: none;
+        }
+
+        #quit{
+            display: none;
+        }
+    }
+}

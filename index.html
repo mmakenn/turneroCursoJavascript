@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <!-- Mis CSS -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <title>Recepción</title>
+    </head>
+    <body class="container vh-100 vw-100 d-flex flex-column">
+        <header>
+            <h1>Lugar Incierto...</h1>
+            <h2>Recepción</h2>
+        </header>
+
+        <div class="container px-4">
+            <div class="row gx-5">
+                <!-- Menú lateral de Navegación -->
+                <div class="col col-lg-3">
+                    <div class="p-3 border left-panel">
+                        <ul class="nav flex-column">
+                            <button type="button" class="btn btn-outline-dark" id="checkInLink">Recepcionarme</button>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" href="pages/time-left.html" id="timeLeftLink">¿Cuánto me falta?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/quit.html" id="quitLink">Me quiero ir...</a>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Interacción con el Usuario, acá le pediría los datos necesarios para la opción que corresponde -->
+                <div class="col col-lg-9">
+                    <div class="p-3 right-panel" id="rightPanel"> 
+                        <div id="welcome">
+                            <p class="fs-3">¡Bienvenido!</p>
+                            <p>Seleccione una opción.</p>
+                            <button type="button" class="btn btn-outline-dark" id="openBtn">ABRIR CENTRAL TURNOS</button>
+                            <button type="button" class="btn btn-outline-dark" id="closeBtn">CERRAR CENTRAL TURNOS</button>
+                        </div>
+                        
+                        <div id="checkIn">
+                            <div id="checkInForm">
+                                <p class="fs-3">Recepcionarme</p>
+                                <p>Completá tus datos</p>
+    
+                                <label for="name">Ingresá tu nombre:</label>
+                                <input type="text" name="name" id="input-name">
+                                <label for="lastname">Ingresá tu apellido:</label>
+                                <input type="text" name="lastname" id="input-lastname">
+    
+                                <button type="button" class="btn btn-outline-dark" id="okCheckIn">Aceptar</button>
+                                <a class="btn btn-outline-dark" href="../index.html">Cancelar</a>
+                            </div>
+                        </div>
+
+                        <div id="timeLeft">
+                            <p class="fs-3">Consulte su tiempo <strong>estimado</strong> de espera.</p>
+                            <label for="id-timeleft">Ingresá tu ID:</label>
+                            <input type="text" name="id-timeLeft" id="id-timeleft">
+
+                            <button type="button" class="btn btn-outline-dark">Aceptar</button>
+                            <button type="button" class="btn btn-outline-dark">Cancelar</button>
+                        </div>
+
+                        <div id="quit">
+                            <p class="fs-3">Abandonar Sala de Espera.</p>
+                            <p>Una vez que abandones la sala de espera, deberás volver a recepcionarte.</p>
+                            <p>Si estás seguro, completá tus datos</p>
+                            
+                            <label for="id-quit">Ingresá tu ID:</label>
+                            <input type="text" name="id-quit" id="id-quit">
+
+                            <button type="button" class="btn btn-outline-dark">Aceptar</button>
+                            <button type="button" class="btn btn-outline-dark">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Inicializo Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <!-- Mis JavaScript -->
+        <script src="js/check-in.js"></script>
+        <script src="js/time-left.js"></script>
+        <script src="js/quit.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
