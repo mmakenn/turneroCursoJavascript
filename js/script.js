@@ -9,11 +9,10 @@ function createDayIDs(amount){
 
 function initializeRoom(){
     /* Inicio del día, se almacenan las variables en el localStorage para ser accedidas desde las distintas secciones. */
-    var waitingRoom = [];
-    localStorage.setItem('waitingRoom', JSON.stringify(waitingRoom));
-
+    localStorage.setItem('waitingRoom', []);
+    
     var todayIDs = createDayIDs(MAX_DAY_TURN);
-    localStorage.setItem('todayIDs', JSON.stringify(todayIDs));
+    localStorage.setItem('todayIDs', todayIDs);
 
     localStorage.setItem('givenTurns', 0);
 
@@ -32,18 +31,18 @@ function resetRoom(){
     $("#openBtn").css({display: 'block'});
 }
 
-
 var openBtn = document.getElementById('openBtn');
 openBtn.addEventListener("click", initializeRoom);
 
 var closeBtn = document.getElementById('closeBtn');
 closeBtn.addEventListener("click", resetRoom);
 
+/* MENÚ DE OPCIONES, UNA VEZ ABIERTO EL TURNERO */
 var checkInLink = document.getElementById('checkInLink');
 checkInLink.addEventListener("click", showCheckIn);
 
-/* var timeLeftLink = document.getElementById('timeLeftLink');
+var timeLeftLink = document.getElementById('timeLeftLink');
 timeLeftLink.addEventListener("click", showTimeLeft);
 
 var quitLink = document.getElementById('quitLink');
-quitLink.addEventListener("click", showQuit); */
+quitLink.addEventListener("click", showQuit);

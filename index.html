@@ -26,6 +26,8 @@
                     <div class="p-3 border left-panel">
                         <ul class="nav flex-column">
                             <button type="button" class="btn btn-outline-dark" id="checkInLink">Recepcionarme</button>
+                            <button type="button" class="btn btn-outline-dark" id="timeLeftLink">¿Cuánto me falta?</button>
+                            <button type="button" class="btn btn-outline-dark" id="quitLink">Me quiero ir...</button>
                             <!-- <li class="nav-item">
                                 <a class="nav-link" href="pages/time-left.html" id="timeLeftLink">¿Cuánto me falta?</a>
                             </li>
@@ -56,30 +58,44 @@
                                 <label for="lastname">Ingresá tu apellido:</label>
                                 <input type="text" name="lastname" id="input-lastname">
     
-                                <button type="button" class="btn btn-outline-dark" id="okCheckIn">Aceptar</button>
-                                <a class="btn btn-outline-dark" href="../index.html">Cancelar</a>
+                                <button type="submit" class="btn btn-outline-dark" id="okCheckIn">Aceptar</button>
+                                <button type="button" class="btn btn-outline-dark" id="cancelCheckIn">Cancelar</button>
                             </div>
+                            <p id="checkInMessage">
+
+                            </p>
                         </div>
 
                         <div id="timeLeft">
-                            <p class="fs-3">Consulte su tiempo <strong>estimado</strong> de espera.</p>
-                            <label for="id-timeleft">Ingresá tu ID:</label>
-                            <input type="text" name="id-timeLeft" id="id-timeleft">
+                            <div id="timeLeftForm">
+                                <p class="fs-3">Consulte su tiempo <strong>estimado</strong> de espera.</p>
+                                <label for="inputTimeLeft">Ingresá tu ID:</label>
+                                <input type="text" name="id-timeLeft" id="inputTimeLeft">
 
-                            <button type="button" class="btn btn-outline-dark">Aceptar</button>
-                            <button type="button" class="btn btn-outline-dark">Cancelar</button>
+                                <button type="button" class="btn btn-outline-dark" id="okTimeLeft">Aceptar</button>
+                                <button type="button" class="btn btn-outline-dark" id="cancelTimeLeft">Cancelar</button>
+                            </div>
+                            <p id="timeLeftMessage">
+
+                            </p>
                         </div>
 
                         <div id="quit">
-                            <p class="fs-3">Abandonar Sala de Espera.</p>
-                            <p>Una vez que abandones la sala de espera, deberás volver a recepcionarte.</p>
-                            <p>Si estás seguro, completá tus datos</p>
-                            
-                            <label for="id-quit">Ingresá tu ID:</label>
-                            <input type="text" name="id-quit" id="id-quit">
+                            <div id="quitForm">
+                                <p class="fs-3">Abandonar Sala de Espera.</p>
+                                <p>Una vez que abandones la sala de espera, deberás volver a recepcionarte.</p>
+                                <p>Si estás seguro, completá tus datos</p>
+                                
+                                <label for="id-quit">Ingresá tu ID:</label>
+                                <input type="text" name="id-quit" id="id-quit">
 
-                            <button type="button" class="btn btn-outline-dark">Aceptar</button>
-                            <button type="button" class="btn btn-outline-dark">Cancelar</button>
+                                <button type="button" class="btn btn-outline-dark" id="okQuit">Aceptar</button>
+                                <button type="button" class="btn btn-outline-dark" id="cancelQuit">Cancelar</button>
+                            </div>
+                            <div id="quitMessage">
+
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -94,6 +110,7 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
         <!-- Mis JavaScript -->
+        <script src="js/status.js"></script>
         <script src="js/check-in.js"></script>
         <script src="js/time-left.js"></script>
         <script src="js/quit.js"></script>

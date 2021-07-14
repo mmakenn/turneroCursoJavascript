@@ -1,3 +1,12 @@
+function showTimeLeft(){
+    changeStatus('#timeLeft', '#welcome');
+    changeStatus('#timeLeftForm', '#timeLeftMessage');
+}
+
+function resetTimeLeft(){
+    changeStatus('#welcome', '#timeLeft');
+}
+
 function foundPatientPosition(id){
     for (let i = 0; i < waitingRoom.length; i++){
         let patient = waitingRoom[i];
@@ -9,5 +18,13 @@ function foundPatientPosition(id){
 }
 
 function getTimeLeft(position){
-    return TURN_TIME * position;
+    let time = TURN_TIME * position;
+
+    setTimeout(resetTimeLeft, 3000);
 }
+
+var timeLeftBtn = document.getElementById('okTimeLeft');
+timeLeftBtn.addEventListener("click", getTimeLeft);
+
+var cancelBtn = document.getElementById('cancelTimeLeft');
+cancelBtn.addEventListener("click", resetTimeLeft);
