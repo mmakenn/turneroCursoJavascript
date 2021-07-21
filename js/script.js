@@ -9,8 +9,6 @@ function createDayIDs(amount){
 
 function initializeRoom(){
     /* Inicio del día, se almacenan las variables en el localStorage para ser accedidas desde las distintas secciones. */
-    localStorage.setItem('waitingRoom', []);
-    
     var todayIDs = createDayIDs(MAX_DAY_TURN);
     localStorage.setItem('todayIDs', todayIDs);
 

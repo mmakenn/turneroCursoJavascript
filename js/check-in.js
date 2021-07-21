@@ -24,7 +24,10 @@ function resetCheckIn(){
 }
 
 function checkInPatient(){
-    let waitingRoom = localStorage.getItem('waitingRoom').split(',');
+    let waitingRoom = localStorage.getItem('waitingRoom') ? localStorage.getItem('waitingRoom') : []
+    if (waitingRoom.length != 0){
+        waitingRoom = JSON.parse(waitingRoom);
+    }
     let todayIDs = localStorage.getItem('todayIDs').split(',');
     let givenTurns = parseInt(localStorage.getItem('givenTurns'));
     
@@ -35,9 +38,10 @@ function checkInPatient(){
         let lastname = document.getElementById('input-lastname').value;
         let id = todayIDs[givenTurns];
 
-        const patient = new Patient(name, lastname, id);
-        const patientJSON = JSON.stringify(patient);
-        waitingRoom.push(patientJSON);
+        let patient = new Patient(name, lastname, id);
+        patient = JSON.stringify(patient);
+        waitingRoom.push(patient);
+        waitingRoom = JSON.stringify(waitingRoom);
         localStorage.setItem('waitingRoom', waitingRoom);
         localStorage.setItem('givenTurns', givenTurns + 1);
         console.log('El paciente fue ingresado...');
