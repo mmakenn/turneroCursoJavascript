@@ -9,8 +9,8 @@ class Patient{
         return (this.name + " " + this.lastname);
     }
 
-    compare(id){
-        return (this.id == id);
+    compare(turn){
+        return (this.turn == turn);
     }
 }
 
