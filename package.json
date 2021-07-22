@@ -7,5 +7,13 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmakenn/turneroCursoJavascript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mmakenn/turneroCursoJavascript/issues"
+  },
+  "homepage": "https://github.com/mmakenn/turneroCursoJavascript#readme",
   "description": ""
 }

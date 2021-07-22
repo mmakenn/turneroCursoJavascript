@@ -22,31 +22,41 @@ body header {
   color: black;
   margin: 2rem 0;
 }
-body .left-panel {
+body header .container-img img {
+  width: 100%;
+  display: none;
+}
+body header #headerTitle {
+  display: none;
+}
+body .panel {
+  display: none;
+}
+body .panel .left-panel {
   background-color: rgba(255, 255, 0, 0.24);
   border-radius: 7%;
   display: none;
 }
-body .left-panel a {
+body .panel .left-panel a {
   color: black;
 }
-body .left-panel a:hover {
+body .panel .left-panel a:hover {
   color: black;
   transform: scale(1.1);
 }
-body .right-panel {
+body .panel .right-panel {
   background-color: rgba(255, 255, 0, 0.24);
 }
-body .right-panel #welcome #closeBtn {
+body .panel .right-panel #welcome #closeBtn {
   display: none;
 }
-body .right-panel #checkIn {
+body .panel .right-panel #checkIn {
   display: none;
 }
-body .right-panel #timeLeft {
+body .panel .right-panel #timeLeft {
   display: none;
 }
-body .right-panel #quit {
+body .panel .right-panel #quit {
   display: none;
 }
 
