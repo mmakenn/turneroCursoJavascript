@@ -17,12 +17,14 @@ function quitPatient(){
     let newWaitingRoom = [];
     let founded = false;
     for (let patient of waitingRoom){
-        patientJSON = JSON.parse(patient);
-        if (patientJSON.turn == turnUser){
+        var patientJSON = JSON.parse(patient);
+        var thisPatient = new Patient(patientJSON.name, patientJSON.lastname, patientJSON.turn);
+        if (thisPatient.compare(turnUser)){
             founded = true;
-            var patientName = patientJSON.name;
-            var patientLastname = patientJSON.lastname;
+            var patientName = thisPatient.getFullName();
             console.log('Paciente encontrado');
+            let givenTurns = parseInt(localStorage.getItem('givenTurns'));
+            localStorage.setItem('givenTurns', givenTurns - 1);
         }else{
             newWaitingRoom.push(patient);
         }
@@ -31,7 +33,7 @@ function quitPatient(){
     if (founded){
         newWaitingRoom = JSON.stringify(newWaitingRoom);
         localStorage.setItem('waitingRoom', newWaitingRoom)
-        message.innerHTML = 'El paciente ' + patientName + ' ' + patientLastname + ' ha sido quitado de la fila correctamente.'
+        message.innerHTML = 'El paciente ' + patientName + ' ha sido quitado de la fila correctamente.'
     }else{
         message.innerHTML = 'El paciente con ID: ' + turnUser + ' no existe. Verifique su ID e intente nuevamente.'
     }

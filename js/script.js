@@ -1,17 +1,8 @@
 const MAX_DAY_TURN = 10;
 const TURN_TIME = 15; //en minutos
 
-function createDayIDs(amount){
-    /* Creación de los ID que identifican a los pacientes. */
-    var array = new Uint32Array(amount);
-    return window.crypto.getRandomValues(array);
-}
-
 function initializeRoom(){
     /* Inicio del día, se almacenan las variables en el localStorage para ser accedidas desde las distintas secciones. */
-    var todayIDs = createDayIDs(MAX_DAY_TURN);
-    localStorage.setItem('todayIDs', todayIDs);
-
     localStorage.setItem('givenTurns', 0);
 
     $("#openBtn").css({display: 'none'});
