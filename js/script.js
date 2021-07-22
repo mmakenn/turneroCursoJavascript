@@ -5,26 +5,24 @@ function initializeRoom(){
     /* Inicio del día, se almacenan las variables en el localStorage para ser accedidas desde las distintas secciones. */
     localStorage.setItem('givenTurns', 0);
 
-    $("#openBtn").css({display: 'none'});
-    $("#closeBtn").css({display: 'block'});
-    $(".left-panel").css({display: 'block'});
+    $(".left-panel").fadeToggle(function(){
+        if ($('#openBtn').html() == 'ABRIR CENTRAL TURNOS'){
+            $('#openBtn').html('CERRAR CENTRAL TURNOS');
+        }else{
+            resetRoom();
+            $('#openBtn').html('ABRIR CENTRAL TURNOS');
+        }
+    });
 }
 
 function resetRoom(){
     localStorage.removeItem('waitingRoom');
     localStorage.removeItem('todayIDs');
     localStorage.removeItem('givenTurns');
-
-    $("#closeBtn").css({display: 'none'});
-    $(".left-panel").css({display: 'none'});
-    $("#openBtn").css({display: 'block'});
 }
 
 var openBtn = document.getElementById('openBtn');
 openBtn.addEventListener("click", initializeRoom);
-
-var closeBtn = document.getElementById('closeBtn');
-closeBtn.addEventListener("click", resetRoom);
 
 /* MENÚ DE OPCIONES, UNA VEZ ABIERTO EL TURNERO */
 var checkInLink = document.getElementById('checkInLink');
