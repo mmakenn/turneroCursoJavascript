@@ -1,0 +1,121 @@
+{
+    "lunes": [{
+        "especialidad": "pediatria",
+        "cantTurnos": 10,
+        "tiempoTurno": 20
+        },
+        {"especialidad": "clinica",
+        "cantTurnos": 15,
+        "tiempoTurno": 15
+        },
+        {"especialidad": "traumatologia",
+        "cantTurnos": 15,
+        "tiempoTurno": 15
+        },
+        {"especialidad": "kinesiologia",
+        "cantTurnos": 15,
+        "tiempoTurno": 40
+        }],
+    "martes": [{
+        "especialidad": "alergista",
+        "cantTurnos": 10,
+        "tiempoTurno": 25
+        },
+        {"especialidad": "diabetologia",
+        "cantTurnos": 13,
+        "tiempoTurno": 15
+        },
+        {"especialidad": "gastroenterologia",
+        "cantTurnos": 8,
+        "tiempoTurno": 15
+        },
+        {"especialidad": "dermatologia",
+        "cantTurnos": 10,
+        "tiempoTurno": 20
+        }],
+    "miercoles": [{
+        "especialidad": "kinesiologia",
+        "cantTurnos": 15,
+        "tiempoTurno": 40
+        },
+        {"especialidad": "hematologia",
+        "cantTurnos": 12,
+        "tiempoTurno": 15
+        },
+        {"especialidad": "pediatria",
+        "cantTurnos": 10,
+        "tiempoTurno": 20
+        },
+        {"especialidad": "ginecologia",
+        "cantTurnos": 15,
+        "tiempoTurno": 15
+        }],
+    "jueves": [{
+        "especialidad": "nefrologia",
+        "cantTurnos": 20,
+        "tiempoTurno": 15
+        },
+        {"especialidad": "cardiologia",
+        "cantTurnos": 15,
+        "tiempoTurno": 15
+        },
+        {"especialidad": "inmunologia",
+        "cantTurnos": 7,
+        "tiempoTurno": 20
+        },
+        {"especialidad": "clinica",
+        "cantTurnos": 15,
+        "tiempoTurno": 15
+        }],
+    "viernes": [{
+        "especialidad": "kinesiologia",
+        "cantTurnos": 15,
+        "tiempoTurno": 40
+        },
+        {"especialidad": "cardiologia",
+        "cantTurnos": 15,
+        "tiempoTurno": 15
+        },
+        {"especialidad": "obstetricia",
+        "cantTurnos": 10,
+        "tiempoTurno": 20
+        },
+        {"especialidad": "clinica",
+        "cantTurnos": 15,
+        "tiempoTurno": 15
+        }],
+    "sabado": [{
+        "especialidad": "ginecologia",
+        "cantTurnos": 15,
+        "tiempoTurno": 15
+        },
+        {"especialidad": "nutricion",
+        "cantTurnos": 20,
+        "tiempoTurno": 20
+        },
+        {"especialidad": "obstetricia",
+        "cantTurnos": 10,
+        "tiempoTurno": 20
+        },
+        {"especialidad": "oncologia",
+        "cantTurnos": 20,
+        "tiempoTurno": 15
+        }],
+    "domingo": [{
+        "especialidad": "alergista",
+        "cantTurnos": 10,
+        "tiempoTurno": 25
+        },
+        {"especialidad": "diabetologia",
+        "cantTurnos": 13,
+        "tiempoTurno": 15
+        },
+        {"especialidad": "gastroenterologia",
+        "cantTurnos": 8,
+        "tiempoTurno": 15
+        },
+        {"especialidad": "dermatologia",
+        "cantTurnos": 10,
+        "tiempoTurno": 20
+        }]
+}
