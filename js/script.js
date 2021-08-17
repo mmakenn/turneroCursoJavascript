@@ -1,12 +1,11 @@
-const MAX_DAY_TURN = 10;
-const TURN_TIME = 15; //en minutos
-const SCHEDULE = '/data/schedule.json';
+const SCHEDULE = '/data/schedule.json'; /* Ruta del .json que contiene la información sobre las especialidades que brindan atención cada día. */
 
 function chargeSchedule(){
+    /* Se busca en el .json la información que corresponde al día en que se ejecuta el script. */
     $.getJSON(SCHEDULE, function(data, status) {
         if (status === "success") {
             let today = new Date();
-            let dayIndex = today.getDay();
+            let dayIndex = today.getDay(); /* Día de hoy: dom=0, lun=1, mar=2, ... */
             
             switch(dayIndex){
                 case 0:
@@ -30,7 +29,10 @@ function chargeSchedule(){
 
 function initializeRoom(){
     /* Inicio del día, se almacenan las variables en el localStorage para ser accedidas desde las distintas secciones. */
-    localStorage.setItem('givenTurns', 0);
+    localStorage.setItem('givenTurns0', 0);
+    localStorage.setItem('givenTurns1', 0);
+    localStorage.setItem('givenTurns2', 0);
+    localStorage.setItem('givenTurns3', 0);
     localStorage.setItem('schedule', JSON.stringify(schedule));
 
     $(".left-panel").fadeToggle(function(){
@@ -44,12 +46,17 @@ function initializeRoom(){
 }
 
 function resetRoom(){
+    /* Se eliminan todas las variables del LocalStorage. */
     localStorage.removeItem('schedule');
-    localStorage.removeItem('waitingRoom');
-    localStorage.removeItem('todayIDs');
-    localStorage.removeItem('givenTurns');
+    localStorage.removeItem('waitingRoom0');
+    localStorage.removeItem('waitingRoom1');
+    localStorage.removeItem('waitingRoom2');
+    localStorage.removeItem('waitingRoom3');
+    localStorage.removeItem('givenTurns0');
+    localStorage.removeItem('givenTurns1');
+    localStorage.removeItem('givenTurns2');
+    localStorage.removeItem('givenTurns3');
 }
-
 
 var schedule;
 chargeSchedule();
@@ -59,10 +66,22 @@ openBtn.addEventListener("click", initializeRoom);
 
 /* MENÚ DE OPCIONES, UNA VEZ ABIERTO EL TURNERO */
 var checkInLink = document.getElementById('checkInLink');
-checkInLink.addEventListener("click", showCheckIn);
+checkInLink.addEventListener("click", () => {show('#checkIn');
+                                            mappingSpecialityBtns('#checkIn');
+                                            setSpecialityBtnBehavior();
+                                            }
+                            );
 
 var timeLeftLink = document.getElementById('timeLeftLink');
-timeLeftLink.addEventListener("click", showTimeLeft);
+timeLeftLink.addEventListener("click", () => {show('#timeLeft');
+                                            mappingSpecialityBtns('#timeLeft');
+                                            setSpecialityBtnBehavior();
+                                            }
+                            );
 
 var quitLink = document.getElementById('quitLink');
-quitLink.addEventListener("click", showQuit);
+quitLink.addEventListener("click", () => {show('#quit');
+                                        mappingSpecialityBtns('#quit');
+                                        setSpecialityBtnBehavior();
+                                        }
+                            );

@@ -37,76 +37,87 @@
                     </div>
                 </div>
 
-                <!-- Interacción con el Usuario, acá le pediría los datos necesarios para la opción que corresponde -->
+                <!-- Interacción con el Usuario, acá se piden los datos necesarios para la opción que corresponde -->
                 <div class="col col-lg-9">
                     <div class="p-3 right-panel" id="rightPanel"> 
+                        <!-- Pantalla de Bienvenida -->
                         <div id="welcome">
                             <p class="fs-3">¡Bienvenido!</p>
                             <p>Seleccione una opción.</p>
+
+                            <!-- Botón para iniciar/cerrar el script -->
                             <button type="button" class="btn btn-outline-dark m-3" id="openBtn">ABRIR CENTRAL TURNOS</button>
                         </div>
                         
+                        <!-- Pantalla de Recepción de Paciente -->
                         <div id="checkIn">
-                            <div id="checkInForm">
-                                <p class="fs-3">Recepcionarme</p>
-                                <p>Completá tus datos</p>
-    
-                                <label for="name">Ingresá tu nombre:</label>
-                                <input type="text" name="name" id="input-name">
-                                <label for="lastname">Ingresá tu apellido:</label>
-                                <input type="text" name="lastname" id="input-lastname">
-                                <div>
-                                    <button type="submit" class="btn btn-outline-dark m-3" id="okCheckIn">Aceptar</button>
-                                    <button type="button" class="btn btn-outline-dark m-3" id="cancelCheckIn">Cancelar</button>
-                                </div>
-                            </div>
-                            <p id="checkInMessage">
+                            <p class="fs-3">Recepcionarme</p>
+                            <!-- Selección de especialidades del día -->
+                            <div id="checkInSpecialityBtns">
 
-                            </p>
+                            </div>
+
+                            <!-- Datos del paciente -->
+                            <p>Completá tus datos</p>
+
+                            <label for="name">Ingresá tu nombre:</label>
+                            <input type="text" name="name" id="input-name">
+                            <label for="lastname">Ingresá tu apellido:</label>
+                            <input type="text" name="lastname" id="input-lastname">
+
+                            <!-- Botones para aceptar/volver al menú principal -->
+                            <div>
+                                <button type="submit" class="btn btn-outline-dark m-3" id="okCheckIn">Aceptar</button>
+                                <button type="button" class="btn btn-outline-dark m-3" id="cancelCheckIn">Cancelar</button>
+                            </div>
                         </div>
 
+                        <!-- Pantalla de Consulta de Tiempo de Espera -->
                         <div id="timeLeft">
-                            <div id="timeLeftForm">
-                                <p class="fs-3">Consulte su tiempo <strong>estimado</strong> de espera.</p>
-                                <label for="inputTimeLeft">Ingresá tu ID:</label>
-                                <input type="text" name="id-timeLeft" id="inputTimeLeft">
+                            <p class="fs-3">Consulte su tiempo <strong>estimado</strong> de espera.</p>
+                            <!-- Selección de especialidades del día -->
+                            <div id="timeLeftSpecialityBtns">
 
-                                <div>
-                                    <button type="button" class="btn btn-outline-dark m-3" id="okTimeLeft">Aceptar</button>
-                                    <button type="button" class="btn btn-outline-dark m-3" id="cancelTimeLeft">Cancelar</button>
-                                </div>
                             </div>
-                            <p id="timeLeftMessage">
 
-                            </p>
+                            <label for="inputTimeLeft">Ingresá tu ID:</label>
+                            <input type="text" name="id-timeLeft" id="inputTimeLeft">
+
+                            <!-- Botones para aceptar/volver al menú principal -->
+                            <div>
+                                <button type="button" class="btn btn-outline-dark m-3" id="okTimeLeft">Aceptar</button>
+                                <button type="button" class="btn btn-outline-dark m-3" id="cancelTimeLeft">Cancelar</button>
+                            </div>
                         </div>
 
+                        <!-- Pantalla de Abandono de la Sala de Espera -->
                         <div id="quit">
-                            <div id="quitForm">
-                                <p class="fs-3">Abandonar Sala de Espera.</p>
-                                <p>Una vez que abandones la sala de espera, deberás volver a recepcionarte.</p>
-                                <p>Si estás seguro, completá tus datos</p>
-                                
-                                <label for="id-quit">Ingresá tu ID:</label>
-                                <input type="text" name="id-quit" id="inputQuit">
-                                <div>
-                                    <button type="button" class="btn btn-outline-dark m-3" id="okQuit">Aceptar</button>
-                                    <button type="button" class="btn btn-outline-dark m-3" id="cancelQuit">Cancelar</button>
-                                </div>
-                            </div>
-                            <div id="quitMessage">
+                            <p class="fs-3">Abandonar Sala de Espera.</p>
+                            <p>Una vez que abandones la sala de espera, deberás volver a recepcionarte.</p>
+                            <p>Si estás seguro, completá tus datos</p>
+
+                            <!-- Selección de especialidades del día -->
+                            <div id="quitSpecialityBtns">
 
                             </div>
+                            
+                            <label for="id-quit">Ingresá tu ID:</label>
+                            <input type="text" name="id-quit" id="inputQuit">
+
+                            <!-- Botones para aceptar/volver al menú principal -->
+                            <div>
+                                <button type="button" class="btn btn-outline-dark m-3" id="okQuit">Aceptar</button>
+                                <button type="button" class="btn btn-outline-dark m-3" id="cancelQuit">Cancelar</button>
+                            </div>
+                        </div>
+
+                        <div id="notification">
 
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- <footer>
-            <p>Realizado por Mac Meldi Roch - 2021 </p>
-        </footer> -->
 
         <!-- Inicializo Bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

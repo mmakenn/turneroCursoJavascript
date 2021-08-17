@@ -1,17 +1,4 @@
-function showQuit(){
-    changeStatus('#quit', '#welcome');
-    changeStatus('#quitForm', '#quitMessage');
-}
-
-function resetQuit(){
-    changeStatus('#welcome', '#quit');
-}
-
 function quitPatient(){
-    let waitingRoom = localStorage.getItem('waitingRoom') ? localStorage.getItem('waitingRoom') : []
-    if (waitingRoom.length != 0){
-        waitingRoom = JSON.parse(waitingRoom);
-    }
     let turnUser = document.getElementById('inputQuit').value;
     
     let newWaitingRoom = [];
@@ -23,27 +10,26 @@ function quitPatient(){
             founded = true;
             var patientName = thisPatient.getFullName();
             console.log('Paciente encontrado');
-            let givenTurns = parseInt(localStorage.getItem('givenTurns'));
-            localStorage.setItem('givenTurns', givenTurns - 1);
+            localStorage.setItem('givenTurns' + speciality, givenTurns - 1);
         }else{
             newWaitingRoom.push(patient);
         }
     }
-    let message = document.getElementById('quitMessage');
+    let message = document.getElementById('notification');
     if (founded){
         newWaitingRoom = JSON.stringify(newWaitingRoom);
-        localStorage.setItem('waitingRoom', newWaitingRoom)
+        localStorage.setItem('waitingRoom' + speciality, newWaitingRoom)
         message.innerHTML = 'El paciente ' + patientName + ' ha sido quitado de la fila correctamente.'
     }else{
         message.innerHTML = 'El paciente con ID: ' + turnUser + ' no existe. Verifique su ID e intente nuevamente.'
     }
     
-    changeStatus('#quitMessage', '#quitForm');
-    setTimeout(resetQuit, 3000);
+    show('#notification');
+    setTimeout(() => show('#welcome'), 3000);
 }
 
 var quitBtn = document.getElementById('okQuit');
 quitBtn.addEventListener("click", quitPatient);
 
 var cancelBtn = document.getElementById('cancelQuit');
-cancelBtn.addEventListener("click", resetQuit);
+cancelBtn.addEventListener("click", () => show('#welcome'));
