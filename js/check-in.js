@@ -23,8 +23,17 @@ function checkInPatient(){
     setTimeout(() => show('#welcome'), 3000);
 }
 
-var checkInBtn = document.getElementById('okCheckIn');
-checkInBtn.addEventListener("click", checkInPatient);
+function clearInputs(){
+    document.getElementById('input-lastname').value = '';
+    document.getElementById('input-name').value = '';
+}
 
-var cancelBtn = document.getElementById('cancelCheckIn');
-cancelBtn.addEventListener("click", () => show('#welcome'));
+var checkInBtn = document.getElementById('checkInOkBtn');
+checkInBtn.addEventListener("click", () => {checkInPatient();
+                                            lockOkBtn('checkIn');
+                                            clearInputs();});
+
+var cancelBtn = document.getElementById('checkinCancelBtn');
+cancelBtn.addEventListener("click", () => {show('#welcome');
+                                            lockOkBtn('checkIn');
+                                            clearInputs();});

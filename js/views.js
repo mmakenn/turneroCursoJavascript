@@ -46,13 +46,27 @@ function selectSpeciality(option){
     turnDuration = sch[speciality].tiempoTurno;
 }
 
-function setSpecialityBtnBehavior(){
+function unlockOkBtn(section){
+    let btn = section + 'OkBtn';
+    document.getElementById(btn).disabled = false;
+}
+
+function lockOkBtn(section){
+    let btn = section + 'OkBtn';
+    document.getElementById(btn).disabled = true;
+}
+
+function setSpecialityBtnBehavior(section){
     var btn0 = document.getElementById('btn0');
-    btn0.addEventListener("click", () => {selectSpeciality(0)});
+    btn0.addEventListener("click", () => {selectSpeciality(0);
+                                        unlockOkBtn(section);});
     var btn1 = document.getElementById('btn1');
-    btn1.addEventListener("click", () => {selectSpeciality(1)});
+    btn1.addEventListener("click", () => {selectSpeciality(1);
+                                        unlockOkBtn(section);});
     var btn2 = document.getElementById('btn2');
-    btn2.addEventListener("click", () => {selectSpeciality(2)});
+    btn2.addEventListener("click", () => {selectSpeciality(2);
+                                        unlockOkBtn(section);});
     var btn3 = document.getElementById('btn3');
-    btn3.addEventListener("click", () => {selectSpeciality(3)});
+    btn3.addEventListener("click", () => {selectSpeciality(3);
+                                        unlockOkBtn(section);});
 }

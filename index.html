@@ -50,7 +50,7 @@
                         </div>
                         
                         <!-- Pantalla de Recepción de Paciente -->
-                        <div id="checkIn">
+                        <form action="" method="" id="checkIn">
                             <p class="fs-3">Recepcionarme</p>
                             <!-- Selección de especialidades del día -->
                             <div id="checkInSpecialityBtns">
@@ -67,13 +67,13 @@
 
                             <!-- Botones para aceptar/volver al menú principal -->
                             <div>
-                                <button type="submit" class="btn btn-outline-dark m-3" id="okCheckIn">Aceptar</button>
-                                <button type="button" class="btn btn-outline-dark m-3" id="cancelCheckIn">Cancelar</button>
+                                <button type="button" class="btn btn-outline-dark m-3" disabled id="checkInOkBtn">Aceptar</button>
+                                <button type="button" class="btn btn-outline-dark m-3" id="checkinCancelBtn">Cancelar</button>
                             </div>
-                        </div>
+                        </form>
 
                         <!-- Pantalla de Consulta de Tiempo de Espera -->
-                        <div id="timeLeft">
+                        <form action="" method="" id="timeLeft">
                             <p class="fs-3">Consulte su tiempo <strong>estimado</strong> de espera.</p>
                             <!-- Selección de especialidades del día -->
                             <div id="timeLeftSpecialityBtns">
@@ -85,13 +85,13 @@
 
                             <!-- Botones para aceptar/volver al menú principal -->
                             <div>
-                                <button type="button" class="btn btn-outline-dark m-3" id="okTimeLeft">Aceptar</button>
-                                <button type="button" class="btn btn-outline-dark m-3" id="cancelTimeLeft">Cancelar</button>
+                                <button type="button" class="btn btn-outline-dark m-3" disabled id="timeLeftOkBtn">Aceptar</button>
+                                <button type="button" class="btn btn-outline-dark m-3" id="timeLeftCancelBtn">Cancelar</button>
                             </div>
-                        </div>
+                        </form>
 
                         <!-- Pantalla de Abandono de la Sala de Espera -->
-                        <div id="quit">
+                        <form action="" method="" id="quit">
                             <p class="fs-3">Abandonar Sala de Espera.</p>
                             <p>Una vez que abandones la sala de espera, deberás volver a recepcionarte.</p>
                             <p>Si estás seguro, completá tus datos</p>
@@ -106,10 +106,10 @@
 
                             <!-- Botones para aceptar/volver al menú principal -->
                             <div>
-                                <button type="button" class="btn btn-outline-dark m-3" id="okQuit">Aceptar</button>
-                                <button type="button" class="btn btn-outline-dark m-3" id="cancelQuit">Cancelar</button>
+                                <button type="button" class="btn btn-outline-dark m-3" disabled id="quitOkBtn">Aceptar</button>
+                                <button type="button" class="btn btn-outline-dark m-3" id="quitCancelBtn">Cancelar</button>
                             </div>
-                        </div>
+                        </form>
 
                         <div id="notification">
 
@@ -128,7 +128,7 @@
 
         <!-- Mis JavaScript -->
         <script src="js/class_patient.js"></script>
-        <script src="js/status.js"></script>
+        <script src="js/views.js"></script>
         <script src="js/check-in.js"></script>
         <script src="js/time-left.js"></script>
         <script src="js/quit.js"></script>

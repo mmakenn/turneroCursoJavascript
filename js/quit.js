@@ -28,8 +28,12 @@ function quitPatient(){
     setTimeout(() => show('#welcome'), 3000);
 }
 
-var quitBtn = document.getElementById('okQuit');
-quitBtn.addEventListener("click", quitPatient);
+var quitBtn = document.getElementById('quitOkBtn');
+quitBtn.addEventListener("click", () => {quitPatient();
+                                        lockOkBtn('quit');
+                                        document.getElementById('inputQuit').value = '';});
 
-var cancelBtn = document.getElementById('cancelQuit');
-cancelBtn.addEventListener("click", () => show('#welcome'));
+var cancelBtn = document.getElementById('quitCancelBtn');
+cancelBtn.addEventListener("click", () => {show('#welcome');
+                                        lockOkBtn('quit');
+                                        document.getElementById('inputQuit').value = '';});

@@ -68,20 +68,20 @@ openBtn.addEventListener("click", initializeRoom);
 var checkInLink = document.getElementById('checkInLink');
 checkInLink.addEventListener("click", () => {show('#checkIn');
                                             mappingSpecialityBtns('#checkIn');
-                                            setSpecialityBtnBehavior();
+                                            setSpecialityBtnBehavior('checkIn');
                                             }
                             );
 
 var timeLeftLink = document.getElementById('timeLeftLink');
 timeLeftLink.addEventListener("click", () => {show('#timeLeft');
                                             mappingSpecialityBtns('#timeLeft');
-                                            setSpecialityBtnBehavior();
+                                            setSpecialityBtnBehavior('timeLeft');
                                             }
                             );
 
 var quitLink = document.getElementById('quitLink');
 quitLink.addEventListener("click", () => {show('#quit');
                                         mappingSpecialityBtns('#quit');
-                                        setSpecialityBtnBehavior();
+                                        setSpecialityBtnBehavior('quit');
                                         }
                             );

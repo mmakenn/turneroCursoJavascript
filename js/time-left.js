@@ -24,8 +24,12 @@ function getTimeLeft(){
     setTimeout(() => show('#welcome'), 3000);
 }
 
-var timeLeftBtn = document.getElementById('okTimeLeft');
-timeLeftBtn.addEventListener("click", getTimeLeft);
+var timeLeftBtn = document.getElementById('timeLeftOkBtn');
+timeLeftBtn.addEventListener("click", () => {getTimeLeft();
+                                            lockOkBtn('timeLeft');
+                                            document.getElementById('inputTimeLeft').value = '';});
 
-var cancelBtn = document.getElementById('cancelTimeLeft');
-cancelBtn.addEventListener("click", () => show('#welcome'));
+var cancelBtn = document.getElementById('timeLeftCancelBtn');
+cancelBtn.addEventListener("click", () => {show('#welcome');
+                                            lockOkBtn('timeLeft');
+                                            document.getElementById('inputTimeLeft').value = '';});
